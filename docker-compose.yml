@@ -24,7 +24,6 @@ services:
        "-e", "wss://ws.framenode-2.s2.dev.sora2.soramitsu.co.jp",
        "-e", "wss://ws.framenode-3.s3.dev.sora2.soramitsu.co.jp",
        "-c", "10",
-       "-e", "wss://ws.framenode-4.s4.dev.sora2.soramitsu.co.jp",
        #  "--start-block", "1000000", # uncomment to specify a non-zero start block
        "--prom-port", "9090",
        "--out", "postgres://postgres:postgres@db:5432/squid-archive"
