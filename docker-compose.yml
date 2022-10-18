@@ -16,15 +16,14 @@ services:
     image: subsquid/substrate-ingest:firesquid
     command: [
        # polkadot endpoints -- replace with your wss
-       "-e", "wss://polkadot-rpc.polkadot.io",
+       "-e", "wss://ws.framenode-1.s1.dev.sora2.soramitsu.co.jp",
        "-c", "10", # allow up to 20 pending requests for the above endpoint (default is 5)
        # for a local setup use 'host.docker.internal' as a host (instead of localhost or 127.0.0.1
        # e.g. "-e", "ws://host.docker.internal:9944",
        # add another endpoint to increase archiving speed and reliability.
-       "-e", "wss://polkadot-rpc.dwellir.com",
-       "-e", "wss://polkadot.api.onfinality.io/public-ws",
+       "-e", "wss://ws.framenode-2.s2.dev.sora2.soramitsu.co.jp",
+       "-e", "wss://ws.framenode-3.s3.dev.sora2.soramitsu.co.jp",
        "-c", "10",
-       "-e", "wss://polkadot.public.curie.radiumblock.io/ws",
        #  "--start-block", "1000000", # uncomment to specify a non-zero start block
        "--prom-port", "9090",
        "--out", "postgres://postgres:postgres@db:5432/squid-archive"
